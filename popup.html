@@ -29,10 +29,35 @@
         gap: 16px;
       }
 
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      button {
+        background-color: #303030;
+        color: #c2c2c2;
+        border: 1px solid #303030;
+        border-radius: 8px;
+        padding: 8px 16px;
+        cursor: pointer;
+        transition: transform 0.1s ease-in-out;
+
+        &:hover {
+          border: 1px solid hsl(180, 100%, 20%);
+          color: hsl(180, 100%, 40%);
+        }
+      }
+
       #leaderboard {
         display: flex;
         flex-direction: column;
         gap: 8px;
+      }
+
+      .hidden {
+        display: none !important;
       }
     </style>
   </head>
@@ -42,11 +67,20 @@
       <small>MEE6 Leaderboard</small>
     </span>
 
-    <span id="leaderboard">
+    <form id="form" action="#">
+      <label for="form-username">Username</label>
+      <input type="text" id="form-username" name="username" />
+
+      <button type="submit">Get Info</button>
+    </form>
+
+    <span id="leaderboard" class="hidden">
       <h2 id="username">Loading...</h2>
 
       <p>Rank: <span id="rank">Loading...</span></p>
       <p>Level: <span id="level">Loading...</span></p>
+
+      <button id="change-username">Use another username</button>
     </span>
 
     <script src="popup.js"></script>
