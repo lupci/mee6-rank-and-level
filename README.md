@@ -10,7 +10,7 @@ If you want to help, you can:
   - Server Name
   - Server ID
   - A toggle between each of the above
-- [ ] Fix Rank problem is the first 3 places on the leaderboard
+- [ ] Fix Rank problem in the first 3 places on the leaderboard
 - [ ] Make offscreen document work so the extension does not have to open a new tab
 - [ ] Update background.js to take from the form (if any, default to current id) ONE OF
   - Server ID
