@@ -2,6 +2,10 @@
 
 Chrome extension to find your own Mee6 leaderboard info.
 
+![image](ss-ext-form.jpg)
+
+![image](ss-ext-info.jpg)
+
 ## Helping
 
 If you want to help, you can:
