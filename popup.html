@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Leaderboard Info</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        border-radius: 8px;
+      }
+
+      body {
+        font-family: "Cascadia Code", "Segoe UI", Tahoma, Geneva, Verdana,
+          sans-serif;
+        width: 250px;
+        background-color: #242424;
+        color: #c2c2c2;
+        border-radius: 8px;
+        padding: 16px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      #leaderboard {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <span>
+      <h1>World Trigger</h1>
+      <small>MEE6 Leaderboard</small>
+    </span>
+
+    <span id="leaderboard">
+      <h2 id="username">Loading...</h2>
+
+      <p>Rank: <span id="rank">Loading...</span></p>
+      <p>Level: <span id="level">Loading...</span></p>
+    </span>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

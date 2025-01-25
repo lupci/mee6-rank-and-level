@@ -1,0 +1,14 @@
+{
+  "name": "Get Mee6 Leaderboard Info",
+  "description": "Find your own Mee6 leaderboard info.",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "permissions": ["scripting", "offscreen", "https://mee6.xyz/*"],
+  "host_permissions": ["https://mee6.xyz/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
