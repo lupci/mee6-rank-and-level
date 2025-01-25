@@ -21,3 +21,7 @@ If you want to help, you can:
   - Server Name
 - [ ] Add a lifetime (cache) for the data for each server for 12 hours
 - [ ] Make the code cleaner
+- [ ] Fix partial usernames mapping to full usernames
+- [ ] Add support for ranks 100+
+- [ ] Add percentage of current level, e.g. 'Level: 23 (79%)'
+- [ ] Make the README cuter (e.g. creating a UX flow with screenshots)
