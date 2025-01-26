@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Leaderboard Info</title>
-    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
     <header class="header">
@@ -13,7 +13,39 @@
     <main>
       <form id="form" action="#" class="form">
         <label for="form-username" class="form-label">Username</label>
-        <input type="text" id="form-username" name="username" class="form-input" />
+        <input
+          type="text"
+          id="form-username"
+          name="username"
+          class="form-input"
+        />
+
+        <div class="form-toggle">
+          <input
+            type="checkbox"
+            id="toggle-id"
+            name="leaderboard-type"
+            class="toggle-id-name"
+          />
+          <label for="toggle-id" class="toggle-label">
+            <span id="toggle-id-label-id">Server ID</span>
+            <span id="toggle-id-label-name">Server Name</span>
+          </label>
+
+          <input
+            type="text"
+            id="form-leaderboard-id"
+            name="leaderboard-id"
+            class="form-input form-group"
+          />
+
+          <input
+            type="text"
+            id="form-leaderboard-name"
+            name="leaderboard-name"
+            class="form-input form-group"
+          />
+        </div>
 
         <button type="submit" class="button">Get Info</button>
       </form>
@@ -22,9 +54,13 @@
         <h2 id="username" class="leaderboard-username">Loading...</h2>
 
         <p class="leaderboard-info">Rank: <span id="rank">Loading...</span></p>
-        <p class="leaderboard-info">Level: <span id="level">Loading...</span></p>
+        <p class="leaderboard-info">
+          Level: <span id="level">Loading...</span>
+        </p>
 
-        <button id="change-username" class="button">Use another username</button>
+        <button id="change-username" class="button">
+          Use another username
+        </button>
       </section>
     </main>
 
