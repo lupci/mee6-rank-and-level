@@ -91,3 +91,78 @@ body {
 .leaderboard-info {
   font-size: 0.875rem;
 }
+
+/* Toggle styles */
+.form-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin-top: 8px;
+  position: relative;
+}
+
+.toggle-id-name {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  position: relative;
+
+  width: 40px;
+  height: 20px;
+
+  border-radius: 20px;
+
+  background-color: #303030;
+
+  transition: background-color 0.1s ease-in-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #303030;
+    background-color: hsl(180, 100%, 40%);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:checked {
+    &::after {
+      transform: translateX(20px);
+    }
+  }
+}
+
+.toggle-label {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  transform: translateY(-50%);
+}
+
+#toggle-id:checked + .toggle-label #toggle-id-label-name {
+  display: none;
+}
+#toggle-id:not(:checked) + .toggle-label #toggle-id-label-id {
+  display: none;
+}
+
+/* Toggle visibility of mutually exclusive inputs */
+.form-group {
+  display: none;
+}
+
+.form-toggle input:checked + #form-leaderboard-id {
+  display: block;
+}
+
+.form-toggle input:not(:checked) + #form-leaderboard-name {
+  display: block;
+}
