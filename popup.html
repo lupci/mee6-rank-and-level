@@ -2,86 +2,31 @@
 <html>
   <head>
     <title>Leaderboard Info</title>
-    <style>
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      html {
-        border-radius: 8px;
-      }
-
-      body {
-        font-family: "Cascadia Code", "Segoe UI", Tahoma, Geneva, Verdana,
-          sans-serif;
-        width: 250px;
-        background-color: #242424;
-        color: #c2c2c2;
-        border-radius: 8px;
-        padding: 16px;
-
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      button {
-        background-color: #303030;
-        color: #c2c2c2;
-        border: 1px solid #303030;
-        border-radius: 8px;
-        padding: 8px 16px;
-        cursor: pointer;
-        transition: transform 0.1s ease-in-out;
-
-        &:hover {
-          border: 1px solid hsl(180, 100%, 20%);
-          color: hsl(180, 100%, 40%);
-        }
-      }
-
-      #leaderboard {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      .hidden {
-        display: none !important;
-      }
-    </style>
+    <link rel="stylesheet" href="popup.css">
   </head>
   <body>
-    <span>
-      <h1>World Trigger</h1>
-      <small>MEE6 Leaderboard</small>
-    </span>
+    <header class="header">
+      <h1 id="title" class="title">World Trigger</h1>
+      <small class="subtitle">MEE6 Leaderboard</small>
+    </header>
 
-    <form id="form" action="#">
-      <label for="form-username">Username</label>
-      <input type="text" id="form-username" name="username" />
+    <main>
+      <form id="form" action="#" class="form">
+        <label for="form-username" class="form-label">Username</label>
+        <input type="text" id="form-username" name="username" class="form-input" />
 
-      <button type="submit">Get Info</button>
-    </form>
+        <button type="submit" class="button">Get Info</button>
+      </form>
 
-    <span id="leaderboard" class="hidden">
-      <h2 id="username">Loading...</h2>
+      <section id="leaderboard" class="leaderboard hidden">
+        <h2 id="username" class="leaderboard-username">Loading...</h2>
 
-      <p>Rank: <span id="rank">Loading...</span></p>
-      <p>Level: <span id="level">Loading...</span></p>
+        <p class="leaderboard-info">Rank: <span id="rank">Loading...</span></p>
+        <p class="leaderboard-info">Level: <span id="level">Loading...</span></p>
 
-      <button id="change-username">Use another username</button>
-    </span>
+        <button id="change-username" class="button">Use another username</button>
+      </section>
+    </main>
 
     <script src="popup.js"></script>
   </body>

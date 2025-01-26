@@ -1,0 +1,93 @@
+/* Reset and global styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Cascadia Code", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 250px;
+  background-color: #242424;
+  color: #c2c2c2;
+  border-radius: 8px;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+}
+
+/* Form styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 0.875rem;
+}
+
+.form-input {
+  padding: 8px;
+  border: 1px solid #c2c2c2;
+  border-radius: 4px;
+  background-color: #303030;
+  color: #c2c2c2;
+}
+
+/* Button styles */
+.button {
+  background-color: #303030;
+  color: #c2c2c2;
+  border: 1px solid #303030;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out, border-color 0.1s ease-in-out,
+    color 0.1s ease-in-out;
+  margin-top: 8px;
+
+  &:hover {
+    border-color: hsl(180, 100%, 20%);
+    color: hsl(180, 100%, 40%);
+  }
+}
+
+/* Leaderboard styles */
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.leaderboard-username {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.leaderboard-info {
+  font-size: 0.875rem;
+}
