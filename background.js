@@ -55,6 +55,8 @@ function scrapeLeaderboard(username) {
           if (node.textContent?.includes(username)) {
             observer.disconnect()
 
+            const server_name = document.querySelector('h1.text-white.text-h3').textContent
+
             const bunch_of_grids = document.querySelectorAll(
               'div.grid.grid-cols-1'
             )
@@ -87,7 +89,7 @@ function scrapeLeaderboard(username) {
 
             const level = user_div.querySelectorAll('div')[10].innerText
             const rank = user_div.querySelectorAll('div')[2].innerText
-            foundUser = { username, level, rank }
+            foundUser = { username, level, rank, server_name }
           }
         })
       }

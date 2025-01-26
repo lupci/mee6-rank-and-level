@@ -63,6 +63,7 @@ document.addEventListener('submit', (e) => {
   const level = $('level')
   const leaderboardDiv = $('leaderboard')
   const formDiv = $('form')
+  const server_name = $('title')
 
   const serverId = '461483989463597057'
 
@@ -70,8 +71,15 @@ document.addEventListener('submit', (e) => {
     { action: 'getUserData', serverId, username },
     (response) => {
       if (response && response.data) {
-        const { username, level: level_, rank: rank_ } = response.data
+        const {
+          username,
+          level: level_,
+          rank: rank_,
+          server_name: server_name_,
+        } = response.data
+
         user.innerHTML = username
+        server_name.innerHTML = server_name_
 
         if (!rank_) {
           rank.parentElement.remove()
@@ -100,7 +108,9 @@ $('change-username').addEventListener('click', () => {
   const form = $('form')
   const username = $('form-username')
   const leaderboardDiv = $('leaderboard')
+  const server_name = $('title')
 
+  server_name.innerHTML = 'Server'
   username.value = ''
   form.classList.remove('hidden')
   leaderboardDiv.classList.add('hidden')
