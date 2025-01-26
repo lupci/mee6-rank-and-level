@@ -11,6 +11,7 @@ function loadData(callback) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  return
   loadData((data) => {
     if (data.username) {
       form.classList.add('hidden')

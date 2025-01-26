@@ -54,6 +54,16 @@ body {
   color: #c2c2c2;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #c2c2c2;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #23232329;
+}
+
 /* Button styles */
 .button {
   background-color: #303030;
@@ -147,22 +157,26 @@ body {
   transform: translateY(-50%);
 }
 
-#toggle-id:checked + .toggle-label #toggle-id-label-name {
+input#toggle-id:checked + .toggle-label #toggle-id-label-name {
   display: none;
 }
-#toggle-id:not(:checked) + .toggle-label #toggle-id-label-id {
+input#toggle-id:not(:checked) + .toggle-label #toggle-id-label-id {
   display: none;
 }
 
 /* Toggle visibility of mutually exclusive inputs */
 .form-group {
   display: none;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
 }
 
-.form-toggle input:checked + #form-leaderboard-id {
+input#toggle-id:checked ~ #form-leaderboard-id {
   display: block;
 }
 
-.form-toggle input:not(:checked) + #form-leaderboard-name {
+input#toggle-id:not(:checked) ~ #form-leaderboard-name {
   display: block;
 }
