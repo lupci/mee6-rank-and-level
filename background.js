@@ -95,8 +95,17 @@ function scrapeLeaderboard(username) {
             }
             if (!user_div) return
 
-            const level = user_div.querySelectorAll('div')[10].innerText
-            const rank = user_div.querySelectorAll('div')[2].innerText
+            let rank = ''
+            const next_img = user_div.querySelector('img')
+            if (next_img.alt.includes('in the leaderboard')) {
+              rank = next_img.alt[0]
+            } else {
+              rank = user_div.querySelector(
+                'div.w-8.h-8.flex.items-center.justify-center'
+              ).textContent
+            }
+
+            const level = user_div.querySelector('div.font-bold.text-white').innerText
             foundUser = { username, level, rank, server_name }
           }
         })
