@@ -180,3 +180,12 @@ input#toggle-id:checked ~ #form-leaderboard-id {
 input#toggle-id:not(:checked) ~ #form-leaderboard-name {
   display: block;
 }
+
+/* Form error */
+.form-error {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  font-size: 0.625rem;
+  color: hsl(180, 100%, 40%);
+}

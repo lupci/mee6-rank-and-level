@@ -1,8 +1,14 @@
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === 'getUserData') {
-    const { serverId, username } = message
+    const { form_is_id, form_server_id_or_name, username } = message
 
-    const leaderboardUrl = `https://mee6.xyz/en/leaderboard/${serverId}`
+    const server_name = !form_is_id
+      ? form_server_id_or_name.toLowerCase().replace(' ', '')
+      : form_server_id_or_name
+
+    const leaderboardUrl = form_is_id
+      ? `https://mee6.xyz/en/leaderboard/${server_name}`
+      : `https://mee6.xyz/en/${server_name}`
 
     chrome.tabs.create({ url: leaderboardUrl, active: false }, (tab) => {
       chrome.tabs.onUpdated.addListener(function listener(tabId, info) {
@@ -55,7 +61,9 @@ function scrapeLeaderboard(username) {
           if (node.textContent?.includes(username)) {
             observer.disconnect()
 
-            const server_name = document.querySelector('h1.text-white.text-h3').textContent
+            const server_name = document.querySelector(
+              'h1.text-white.text-h3'
+            ).textContent
 
             const bunch_of_grids = document.querySelectorAll(
               'div.grid.grid-cols-1'
