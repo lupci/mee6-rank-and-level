@@ -14,7 +14,7 @@ If you want to help, you can:
   - Server Name
   - Server ID
   - A toggle between each of the above
-- [ ] Fix Rank problem in the first 3 places on the leaderboard
+- [x] Fix Rank problem in the first 3 places on the leaderboard
 - [ ] Make offscreen document work so the extension does not have to open a new tab
 - [x] Update background.js to take from the form ONE OF
   - Server ID
