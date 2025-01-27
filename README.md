@@ -25,3 +25,5 @@ If you want to help, you can:
 - [ ] Add support for ranks 100+
 - [ ] Add percentage of current level, e.g. 'Level: 23 (79%)'
 - [ ] Make the README cuter (e.g. creating a UX flow with screenshots)
+- [ ] Use the API instead 😓
+- [x] Extract the server ID when using the Server Name
