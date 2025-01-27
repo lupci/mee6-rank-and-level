@@ -27,3 +27,7 @@ If you want to help, you can:
 - [ ] Make the README cuter (e.g. creating a UX flow with screenshots)
 - [ ] Use the API instead 😓
 - [x] Extract the server ID when using the Server Name
+- [ ] Add the README
+  - [ ] Updated screenshots
+  - [ ] How to use the extension before it's published
+  - [ ] How to get the Server ID inside Discord
